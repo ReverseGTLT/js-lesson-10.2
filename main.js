@@ -65,9 +65,7 @@ console.log(resultTelNumber.join('\n'));
 
 const arraySum = users.slice(0);
 const resultTelNumberSum = arraySum.reduce((accum, value) => {
-    if (+value.balance.replace(",", "").replace("$", "") > 2000) {
-        accum += (+value.balance.replace(",", "").replace("$", ""));
-    }
+    accum += (+value.balance.replace(",", "").replace("$", ""));
     return accum;
 },0);
 console.log(Math.round(resultTelNumberSum * 100) / 100);
